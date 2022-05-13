@@ -9,8 +9,10 @@ app.use(cors());
 
 app.get("/", (req, res) => {
 	res.status(200).json({
-		a: "Hola"
+		a: "Hola",
+		s: 24
 	})
+	
 })
 
 app.listen(3000, () => {
