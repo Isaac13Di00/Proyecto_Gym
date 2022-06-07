@@ -1,0 +1,21 @@
+footer{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    
+}
+.ul-footer{
+    margin-top: 20px;
+}
+.ul-footer li{
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+#horario{
+    color:#8b8b8b;
+}

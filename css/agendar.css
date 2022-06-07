@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:rgba(221, 221, 221, 1);
+    display: grid;
+}
+section{
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.div-agendar{
+    border: solid 5px rgb(255, 139, 44);
+    border-radius: 5px;
+    width: 60%;
+    height: fit-content;
+    margin: 30px auto;
+    padding: 80px 30px;
+}
+.lbl-fecha{
+    margin-top: 50px;
+    font-size: 30px;
+    color: #8b8b8b;
+}
+.inp-fecha{
+    padding: 15px;
+    margin-top: 50px;
+    font-size: 30px;
+    background-color: rgb(255, 255, 255);
+    color: #ffffff;
+    border-radius: 5px;
+    border: solid 3px #8b8b8b;
+}
+.btn-agendar{
+    margin: 50px;
+    width: 45%;
+    font-size: 30px;
+    padding: 8px 0 8px;
+    border: solid 3px #8b8b8b;
+    border-radius: 5px;
+    background-color: rgba(221, 221, 221, 1);
+    box-shadow: 0px 5px #8b8b8b5e;
+}
+.btn-agendar:hover{
+    background-color: rgb(199, 199, 199);
+}
