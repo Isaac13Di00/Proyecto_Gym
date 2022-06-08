@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/footerStyle.css">
+<link rel="stylesheet" href="/Proyecto-Gym/css/footerStyle.css">
 <footer>
     
     <ul class="ul-footer">
