@@ -1,6 +1,9 @@
 <?php
-    session_start();
-    error_reporting(0);
+	session_start();
+	error_reporting(0);
+    if (!isset($_SESSION['nombre'])) {
+        header("Location: /Proyecto-Gym/");
+    } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,18 +15,18 @@
     <title>Krachtig Gym - Editar Perfil</title>
 </head>
 <body style="display: grid;">
-    <?php include("/xampp/htdocs/Proyecto-Gym/componentes/usuario/templates/tmplt_header.php");?>
+    <?php include("./templates/tmplt_header.php");?>
     <section>
         <div class="div-name">
-            <label class="name" id="idNombre">Nombre</label>
+            <label class="name" id="idNombre"><?php echo date('d/m/y');?></label>
         </div>
         <div class="div-info">
-            <div class="info">
+            <form class="info" method="POST">
                 <ul>
-                    <li><label class="info-text">Membresía: </label><label class="info-text bold">#membresia</label></li>
-                    <li><label class="info-text">Miembro desde: </label><label class="info-text bold">#fechamiembro</label></li>
+                    <li><label class="info-text">Membresía: </label><label class="info-text bold"><?php echo $_SESSION['membresia'];?></label></li>
+                    <li><label class="info-text">Miembro desde: </label><label class="info-text bold"><?php echo $_SESSION['miembro_desde'];?></label></li>
                     <br>
-                    <li><label class="info-text">Vigencia: </label><label class="info-text bold">#vigencia</label></li>
+                    <li><label class="info-text">Vigencia: </label><label class="info-text bold"><?php echo $_SESSION['vigencia'];?></label></li>
                     <br>
                     <li><label class="info-text bold">Sexo: </label><select class="info-text">
                         <option value="Masculino">Masculino</option>
@@ -50,12 +53,12 @@
                     <li><label class="info-text bold">Colonia: </label><input type="text" class="info-text"/></li>
                     <li><label class="info-text bold">Código postal: </label><input type="number" class="info-text"/></li>
                 </ul>
-            </div>
+            </form>
             <div class="visits">
-                <a href="perfil.php"><button>Terminar</button></a>
+                <a href="./perfil.php"><button>Terminar</button></a>
             </div>
         </div>
     </section>
-    <?php include("/xampp/htdocs/Proyecto-Gym/componentes/usuario/templates/tmplt_footer.php");?>
+    <?php include("./templates/tmplt_footer.php");?>
 </body>
 </html>

@@ -37,6 +37,13 @@ section{
     padding-left: 15px;
 }
 
+.div-centro{
+    width: 50%;
+    height: fit-content;
+    margin-top: 15px;
+    padding-left: 15px;
+}
+
 .info{
     float: left;
     margin-left: 20px;

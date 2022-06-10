@@ -28,7 +28,10 @@
         header("Location: /Proyecto_Gym/componentes/usuario/perfil.php");
       }else{
         $_SESSION['login'] = $registrado;
-        $_SESSION['area'] = $datos['area'];
+        $_SESSION['membresia'] = $datos['membresia'];
+        $_SESSION['nombre'] = $datos['nombre'];
+        $_SESSION['miembro_desde'] = $datos['miembro_desde'];
+        $_SESSION['vigencia'] = $datos['vigencia'];
         $_SESSION['sexo'] = $datos['sexo'];
         $_SESSION['fecha_nacimiento'] = $datos['fecha_nacimiento'];
         $_SESSION['tipo_sangre'] = $datos['tipo_sangre'];
@@ -37,7 +40,6 @@
         $_SESSION['calle'] = $datos['calle'];
         $_SESSION['colonia'] = $datos['colonia'];
         $_SESSION['cp'] = $datos['cp'];
-        $_SESSION['nombre'] = $datos['nombre'];
         header("Location: /Proyecto_Gym/componentes/administrador/perfil.php");
       }
     } else {
