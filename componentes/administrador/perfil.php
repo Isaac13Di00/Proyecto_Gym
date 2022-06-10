@@ -3,7 +3,7 @@
     error_reporting(0); 
     if (!isset($_SESSION['nombre'])) {
         header("Location: /Proyecto_Gym/");
-    }    
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,8 @@
         <div class="div-name">
             <label class="name" id="idNombre"><?php echo $_SESSION['nombre'];?></label>
         </div>
-        <div class="div-info">
+        <center>
+            <div class="div-info">
             <div class="row">
             <div class="col-lg-3 col-6">
                 <!-- small box -->
@@ -71,6 +72,7 @@
             <!-- ./col -->
             </div>
         </div>
+        </center>
     </section>
     <?php include("./templates/tmplt_footer.php");?>
 </body>

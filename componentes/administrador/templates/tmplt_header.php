@@ -15,7 +15,7 @@
 <div class="header-more">
             <div class="tabs">
                 <ul>
-                    <a href="../usuario/perfil.php"><li>Inicio</li></a>
+                    <a href="../administrador/perfil.php"><li>Inicio</li></a>
                     <li class="socios">Socios <ion-icon name="caret-down" class="caret-down"></ion-icon>
                             <div class="socios-mas">
                                 <a>Registrar usuario</a>
