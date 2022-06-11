@@ -53,15 +53,42 @@
         };
         $("#chartContainer").CanvasJSChart(options);
         });
+        $.getJSON("/Proyecto_Gym/componentes/administrador/utilidades/generos.php", function (result) {
+          var charta = new CanvasJS.Chart("chartContainera", {
+            theme: "light2",
+            exportEnabled: true,
+            animationEnabled: true,
+            title: {
+              text: "Generos"
+            },
+            data: [{
+              type: "pie",
+              startAngle: 25,
+              toolTipContent: "<b>{label}</b>: {y}%",
+              showInLegend: "true",
+              legendText: "{label}",
+              indexLabelFontSize: 16,
+              indexLabel: "{label} - {y}%",
+              dataPoints: [
+                { y: result[0], label: "Hombre" },
+                { y: result[1], label: "Mujer" },
+                { y: result[2], label: "Otro" }
+              ]
+            }]
+          });
+          charta.render();
+        });
       }
     </script>
     <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
     <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
 <body style="display: grid;">
     <?php include("./templates/tmplt_header.php");?>
     <section>
       <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+      <div id="chartContainera" style="height: 300px; width: 100%;"></div>
     </section>
     
 </body>
