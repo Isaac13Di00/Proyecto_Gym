@@ -1,10 +1,13 @@
 <?php
   include "conexion.php";
-  $resultado = $mysqli->query("SELECT citas.id as id, usuario.nombre as nombre, citas.fecha as fecha, citas.asistencia as asistencia FROM citas JOIN usuario ON citas.idUsuario = usuario.id");
+  $resultado = $mysqli->query("SELECT citas.id as id, citas.idUsuario , usuario.nombre as nombre, citas.fecha as fecha, citas.asistencia as asistencia FROM citas JOIN usuario ON citas.idUsuario = usuario.id");
   while ($datos = mysqli_fetch_array($resultado)) {
     $idAdministrador = $_SESSION['id'];
+    $nombre = $datos['nombre'];
     $idCita = $datos['id'];
+    $idUsuario = $datos['idUsuario'];
     $fecha = $datos['fecha'];
+    $asistencia = $datos['asistencia'];
     $asistencia = $datos['asistencia'];
     if ($asistencia != 1) {
       echo "
@@ -14,10 +17,11 @@
             <td>$fecha</td>
             <td>$asistencia</td>
             <td>
-              <form action='confirmarCita.php' metoth='POST'>
-                <button class = 'btn'>Confirmar asistencia</button>
+              <form action='utilidades/confirmarCita.php' method='POST'>
                 <input type='hidden' value='$idCita' name='idCita'>
                 <input type='hidden' value='$idAdministrador' name='idAdministrador'>
+                <input type='hidden' value='$idUsuario' name='idUsuario'>
+                <input type='submit' class = 'btn' value='Confirmar cita'></input>
               </form>
             </td>
           </tr>

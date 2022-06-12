@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	error_reporting(0);
+    if (!isset($_SESSION['nombre'])) {
+        header("Location: /Proyecto_Gym/");
+    } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
