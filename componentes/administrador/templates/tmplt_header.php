@@ -25,7 +25,7 @@
                             </div>
                         </li>
                     
-                    <a><li>Citas</li></a>
+                    <a href="../administrador/citas.php"><li>Citas</li></a>
                     <a href="../administrador/registros.php"><li>Registros</li></a>
                 </ul>
             </div>

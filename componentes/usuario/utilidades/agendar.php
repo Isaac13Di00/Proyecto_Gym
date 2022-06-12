@@ -10,7 +10,7 @@
   }
   $id = $_SESSION['id'];
   try {
-    $sql = "INSERT INTO `citas`(`idUsuario`, `fecha`) VALUES ('$id','$fecha')";
+    $sql = "INSERT INTO `citas`(`idUsuario`, `fecha`, `asistencia`) VALUES ('$id','$fecha','0')";
     if ($mysqli->query($sql) === TRUE) {
       echo "<script>
 		        alert('Cita realizado.');

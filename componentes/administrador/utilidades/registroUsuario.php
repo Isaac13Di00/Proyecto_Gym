@@ -21,7 +21,8 @@
     if ($mysqli->query($sql) === TRUE) {
       echo "<script>
 		        alert('Registro realizado.');
-		        window.location= '../regisSocio.php' </script>";
+		        </script>";
+      header("Location: ".$_SERVER['HTTP_REFERER']."");
     } else {
       echo "Error: " . $sql . "<br>" . $mysqli->error;
     }

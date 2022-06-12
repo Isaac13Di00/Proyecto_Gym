@@ -6,14 +6,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Krachtig Gym - Perfil</title>
+    <title>Krachtig Gym - Registros</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/registros.css">
     <script type="text/javascript">
       window.onload = function () {
         const y = [];
-        $.getJSON("/Proyecto_Gym/componentes/administrador/utilidades/citas.php", function (result) {
+        $.getJSON("/Proyecto_Gym/componentes/administrador/utilidades/registros.php", function (result) {
           for (var i = 0; i < 12; i++) {
             y[i] = result[0].valory[i];
             
