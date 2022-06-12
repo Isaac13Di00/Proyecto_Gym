@@ -1,11 +1,9 @@
 <?php
   include "conexion.php";
-  $resultado = $mysqli->query("SELECT usuario.nombre, usuario.membresia, usuario.miembro_desde, usuario.vigencia, usuario.sexo, usuario.fecha_nacimiento, usuario.tipo_sangre, usuario.telefono, usuario.email, usuario.calle, usuario.colonia, usuario.cp FROM `usuario`");
+  $resultado = $mysqli->query("SELECT `nombre`, `area`, `sexo`, `fecha_nacimiento`, `tipo_sangre`, `telefono`, `email`, `calle`, `colonia`, `cp` FROM `administrador`");
   while ($datos = mysqli_fetch_array($resultado)) {
     $nombre = $datos['nombre'];
-    $membresia = $datos['membresia'];
-    $miembro_desde = $datos['miembro_desde'];
-    $vigencia = $datos['vigencia'];
+    $area = $datos['area'];
     $sexo = $datos['sexo'];
     $fecha_nacimiento = $datos['fecha_nacimiento'];
     $tipo_sangre = $datos['tipo_sangre'];
@@ -18,9 +16,7 @@
       echo "
           <tr>
             <td>$nombre</td>
-            <td>$membresia</td>
-            <td>$miembro_desde</td>
-            <td>$vigencia</td>
+            <td>$area</td>
             <td>$sexo</td>
             <td>$fecha_nacimiento</td>
             <td>$tipo_sangre</td>
