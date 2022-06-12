@@ -5,28 +5,42 @@
 }
 body{
     display: grid;
+    background-color: rgba(6, 17, 60, 1);
 }
-#contenedor{
-    background-color:rgba(6, 17, 60, 1);
+
+.divIMG{
+    margin: 0 auto;
+    width: 450px;
+    height: 450px;
+}
+.divIMG img{
+    width: 100%;
+    height: 100%;
 }
 
 .formulario{
     border: solid 1px rgba(79, 136, 173, 0.253);
 	border-radius: 3px;
 	margin: 0 auto;
-	margin-top: 75px;
+	margin-top: 15px;
 	padding: 15px 30px 30px 30px;
 	width: 400px;
 	text-align: center;
 }
-
+h3{
+    color: rgb(255, 139, 44);
+}
 .inputLogin{
-    width: 100%;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: calc(100% - 10px);
     border: 5px;
-    border-radius: 0px;
+    border-radius: 7px;
     height: 30px;
     box-shadow: inset 0px 1px 8px rgb(92, 92, 92);
     margin-top: 20px;
+
 }
 
 #btnIngresar{
@@ -36,6 +50,8 @@ body{
     width: 100%;
     height: 30px;
     margin-top: 15px;
+    font-size: 20px;
+    color:white;
 }
 
 #btnIngresar:hover{

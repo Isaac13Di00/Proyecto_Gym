@@ -3,7 +3,7 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <header>
         <div class="header-pageName">
-            <h1>KRACHTIG GYM</h1>
+            <img src="/Proyecto_Gym/imagenes/headerIMG.jpeg">
         </div>
         <div class="more">
                 <button class="mas"><ion-icon name="caret-down" class="mas-icon"></ion-icon></button>

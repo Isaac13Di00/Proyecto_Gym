@@ -52,4 +52,17 @@
       echo $e;
     }
   }
+
+  function verifyPass($pass, $bdPass){
+    return password_verify($pass, $bdPass);
+  }
+
+  function getHash($conexion, $correo, $tipoUsuario){
+    try {
+      $resultado = $conexion->query("SELECT contra FROM $tipoUsuario WHERE email = '$correo'");
+      return $resultado->fetch_assoc();
+    } catch (PDOException $e) {
+      echo $e;
+    }
+  }
 ?>

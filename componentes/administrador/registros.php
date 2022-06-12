@@ -1,9 +1,6 @@
 <?php
     session_start();
-//    error_reporting(0); 
-    if (!isset($_SESSION['nombre'])) {
-        header("Location: /Proyecto_Gym/");
-    }    
+    error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +9,7 @@
     <title>Krachtig Gym - Perfil</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/perfil.css">
+    <link rel="stylesheet" href="../../css/registros.css">
     <script type="text/javascript">
       window.onload = function () {
         const y = [];
@@ -87,9 +84,16 @@
 <body style="display: grid;">
     <?php include("./templates/tmplt_header.php");?>
     <section>
-      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-      <div id="chartContainera" style="height: 300px; width: 100%;"></div>
+      <div class="div-row">
+        <div class="chartcontainer">
+          <div class="chart" id="chartContainer"></div>
+        </div>
+        <div class="chartcontainer">
+          <div class="chart" id="chartContainera"></div>
+        </div>
+      </div>
+      
     </section>
-    
+    <?php include("./templates/tmplt_footer.php");?>
 </body>
 </html>

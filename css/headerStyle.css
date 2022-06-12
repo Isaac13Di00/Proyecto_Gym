@@ -17,13 +17,18 @@ header{
 .header-pageName{
     float: left;
     height: 100%;
-    padding-top: 30px;
     width: max-content;
     margin-left: 50px;
     
 }
+.header-pageName img{
+    height: 75%;
+    width: 75%;
+}
 
-
+ul{
+    margin-bottom: 0;
+}
 .header-more{
     background-color:rgba(6, 17, 60, 1);
     width: auto;

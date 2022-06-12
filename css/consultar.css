@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:rgba(221, 221, 221, 1);
+    display: grid;
+}
+section{
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-bottom: 20px;
+    
+}
+ul{
+    list-style: none;
+}
+.head{
+    width: 74%;
+    text-align: center;
+    height: 40px;
+    padding-left:13%;
+    padding-right: 13%;
+}
+.btn-buscador{
+    float: right;
+    background-color: rgb(255, 139, 44);
+    border-style: none;
+    border-radius: 7px;
+    color: white;
+    height: 40px;
+    width: 7%;
+    margin-left: 25px;
+    font-size: 20px;
+}
+.btn-buscador:hover{
+    background-color: rgb(206, 111, 33);
+}
+.buscador{
+    float: right;
+    width: 60%;
+    padding: 7px;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 35px;
+    float: left;
+}
+.div-wrap{
+    margin: 0 auto;
+    padding-left:13%;
+    padding-right: 13%;
+}
+.div-consulta{
+    background-color: rgb(255, 139, 44);
+    height: 160px;
+    width: 100%;
+    border-radius: 7px;
+    padding: 15px 10px 10px 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+}
+.bloque{
+    float: left;
+    text-align: left;
+    color: white;
+    width: 33%;
+    height: 100%;
+    
+}
+
+.etiqueta{
+    font-weight: bold;
+    padding-top: 25px;
+}
+.info{
+    float: right;
+    margin-right: 15px;
+}   

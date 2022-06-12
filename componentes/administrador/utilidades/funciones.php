@@ -4,4 +4,9 @@
     $resultado = $resultado->fetch_assoc();
     return $resultado;
   }
+  function hashPass($unHash){
+    $option = array('cost' => 10);
+    return password_hash($unHash, PASSWORD_BCRYPT, $option);
+  }
+  
 ?>

@@ -19,10 +19,12 @@
     <section>
         <div class="div-agendar">
             <div>
-                <label class="lbl-fecha">Fecha: </label>
-                <input type="date" class="inp-fecha"/>
-                <br>
-                <input type="submit" class="btn-agendar" value="Agendar visita"/>
+                <form action="./utilidades/agendar.php" method="POST">
+                    <label class="lbl-fecha">Fecha: </label>
+                    <input name="fecha" type="date" class="inp-fecha"/>
+                    <br>
+                    <input type="submit" class="btn-agendar" value="Agendar visita"/>
+                </form>
             </div>
         </div>
     </section>

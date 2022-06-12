@@ -4,15 +4,14 @@
   include "./funciones.php";
   $correo = $_POST["correo"];
   $contra = $_POST["contra"];
-
   $registrado = registrado($mysqli, $correo);
-  $datos = getDatos($mysqli, $correo, $registrado);
-
+  $hash = getHash($mysqli, $correo, $registrado);
   if ($registrado != "no_registrado") {
-    if (validacionLogin($mysqli, $correo, $contra, $registrado)) {
+    if(verifyPass($contra, $hash['contra'])){
+      $datos = getDatos($mysqli, $correo, $registrado);
       if ($registrado == "usuario") {
-        $_SESSION['id'] = $datos['id'];
         $_SESSION['login'] = $registrado;
+        $_SESSION['id'] = $datos['id'];
         $_SESSION['nombre'] = $datos['nombre'];
         $_SESSION['membresia'] = $datos['membresia'];
         $_SESSION['miembro_desde'] = $datos['miembro_desde'];
@@ -28,6 +27,7 @@
         header("Location: /Proyecto_Gym/componentes/usuario/perfil.php");
       }else{
         $_SESSION['login'] = $registrado;
+        $_SESSION['id'] = $datos['id'];
         $_SESSION['area'] = $datos['area'];
         $_SESSION['sexo'] = $datos['sexo'];
         $_SESSION['fecha_nacimiento'] = $datos['fecha_nacimiento'];
@@ -40,13 +40,15 @@
         $_SESSION['nombre'] = $datos['nombre'];
         header("Location: /Proyecto_Gym/componentes/administrador/perfil.php");
       }
-    } else {
-      # code...
-    }
-    
+    }else{
+      #Mensaje de contraseña incorrecta
+      echo "<script>
+		        alert('Datos incorrectos.');
+		        window.location= '/Proyecto_Gym/' </script>";
+   }
   }else{
     #Mensaje de no registrado
     echo "$registrado";
+    header("Location: /Proyecto_Gym/");
   }
-  
 ?>

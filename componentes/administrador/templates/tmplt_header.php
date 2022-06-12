@@ -3,7 +3,7 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <header>
         <div class="header-pageName">
-            <h1>KRACHTIG GYM</h1>
+            <img src="/Proyecto_Gym/imagenes/headerIMG.jpeg">
         </div>
         <div class="more">
                 <button class="mas"><ion-icon name="caret-down" class="mas-icon"></ion-icon></button>
@@ -18,10 +18,10 @@
                     <a href="../administrador/perfil.php"><li>Inicio</li></a>
                     <li class="socios">Socios <ion-icon name="caret-down" class="caret-down"></ion-icon>
                             <div class="socios-mas">
-                                <a>Registrar usuario</a>
-                                <a>Consultar usuario</a>
-                                <a>Registrar empleado</a>
-                                <a>Consultar empleado</a>
+                                <a href="../administrador/regisSocio.php">Registrar socio</a>
+                                <a href="../administrador/consulSocio.php">Consultar socio</a>
+                                <a href="../administrador/regisEmple.php">Registrar empleado</a>
+                                <a href="../administrador/consulEmple.php">Consultar empleado</a>
                             </div>
                         </li>
                     
