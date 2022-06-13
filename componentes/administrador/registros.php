@@ -86,6 +86,7 @@
           console.log(result[1]);
           var charte = new CanvasJS.Chart("chartContainere", {
             animationEnabled: true,
+            exportEnabled: true,
             title:{
             text: "Citas hechas/confirmadas",
             horizontalAlign: "left"
@@ -122,6 +123,9 @@
         <div class="chartcontainer">
           <div class="chart" id="chartContainera"></div>
         </div>
+        
+      </div>
+      <div class="div-row">
         <div class="chartcontainer">
           <div class="chart" id="chartContainere"></div>
         </div>
