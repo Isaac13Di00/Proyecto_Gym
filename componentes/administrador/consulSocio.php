@@ -18,7 +18,7 @@
     <?php include("./templates/tmplt_header.php");?>
     <section>
         <div class="table-wraper">
-            <table>
+            <table class="table">
                 <tr>
                     <th>Nombre</th>
                     <th>Membresia</th>
@@ -27,7 +27,7 @@
                     <th>Sexo</th>
                     <th>Fecha nacimiento</th>
                     <th>Tipo Sangre</th>
-                    <th>Teléfono</th>
+                    <th>TelÃ©fono</th>
                     <th>Email</th>
                     <th>Calle</th>
                     <th>Colonia</th>

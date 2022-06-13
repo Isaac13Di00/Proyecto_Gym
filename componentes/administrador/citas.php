@@ -18,7 +18,7 @@
     <?php include("./templates/tmplt_header.php");?>
     <section>
         <div class="table-wraper">
-            <table>
+            <table class="table">
                 <tr>
                     <th>Id</th>
                     <th>Nombre</th>

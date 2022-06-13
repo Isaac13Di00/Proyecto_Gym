@@ -18,7 +18,7 @@
     <?php include("./templates/tmplt_header.php");?>
     <section>
         <div class="table-wraper">
-            <table>
+            <table class="table">
                 <tr>
                     <th>Nombre</th>
                     <th>Área</th>
@@ -29,7 +29,7 @@
                     <th>Email</th>
                     <th>Calle</th>
                     <th>Colonia</th>
-                    <th>Codigo postal</th>
+                    <th>Cósdigo postal</th>
                     <th>Dar de baja</th>
                 </tr>
                 <tr>

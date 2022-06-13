@@ -17,7 +17,7 @@
                 <ul>
                     <a href="../usuario/perfil.php"><li>Perfil</li></a>
                     <a href="../usuario/agendar.php"><li>Agendar</li></a>
-                    <a><li>Historial</li></a>
+                    <a href="../usuario/historial.php"><li>Historial</li></a>
                 </ul>
             </div>
         </div>
