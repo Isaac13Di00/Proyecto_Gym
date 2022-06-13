@@ -1,6 +1,6 @@
 <?php
   include "conexion.php";
-  $resultado = $mysqli->query("SELECT citas.id as id, citas.idUsuario , usuario.nombre as nombre, citas.fecha as fecha, citas.asistencia as asistencia FROM citas JOIN usuario ON citas.idUsuario = usuario.id WHERE citas.fecha = CURRENT_DATE;");
+  $resultado = $mysqli->query("SELECT citas.id as id, citas.idUsuario , usuario.nombre as nombre, citas.fecha as fecha, citas.asistencia as asistencia FROM citas JOIN usuario ON citas.idUsuario = usuario.id");
   while ($datos = mysqli_fetch_array($resultado)) {
     $idAdministrador = $_SESSION['id'];
     $nombre = $datos['nombre'];

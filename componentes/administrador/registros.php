@@ -20,7 +20,6 @@
           const y = [];
           for (var i = 0; i < 12; i++) {
             y[i] = result[0].valory[i];
-            
           };
           var options = {
             animationEnabled: true,
@@ -82,8 +81,6 @@
         });
         //DASH DONA
         $.getJSON("/Proyecto_Gym/componentes/administrador/utilidades/citasHechasConfirmadas.php", function (result) {
-          console.log(result[0]);
-          console.log(result[1]);
           var charte = new CanvasJS.Chart("chartContainere", {
             animationEnabled: true,
             exportEnabled: true,
