@@ -6,7 +6,7 @@
   $contra = $_POST["contra"];
   if ($_POST['correo'] != null AND $_POST['contra'] != null) {
     $registrado = registrado($mysqli, $correo);
-    //if($registrado != "dado_de_baja"){  
+    if($registrado != "dado_de_baja"){  
       $hash = getHash($mysqli, $correo, $registrado);
       if ($registrado != "no_registrado") {
         if(verifyPass($contra, $hash['contra'])){
@@ -26,7 +26,7 @@
             $_SESSION['calle'] = $datos['calle'];
             $_SESSION['colonia'] = $datos['colonia'];
             $_SESSION['cp'] = $datos['cp'];
-          header("Location: /Proyecto_Gym/componentes/usuario/perfil.php");
+            header("Location: /Proyecto_Gym/componentes/usuario/perfil.php");
           }else{
             $_SESSION['login'] = $registrado;
             $_SESSION['id'] = $datos['id'];
@@ -54,12 +54,12 @@
           alert('No registrado.');
           window.location= '/Proyecto_Gym/' </script>";
       }
-    /*}else{
+    }else{
       #Mensaje de dado de baja
       echo "<script>
           alert('Dado de baja.');
           window.location= '/Proyecto_Gym/' </script>";
-    }*/
+    }
   }else{
     #Mensaje de campos vacios 
     echo "<script>

@@ -10,8 +10,11 @@
         return "administrador";
       }else{
         $sentencia = $conexion->query("SELECT * FROM usuario WHERE email = '$correo' LIMIT 1");
+        $sentencia = $sentencia->fetch_assoc();
         if (isset($sentencia)) {
-         
+          if ($sentencia['estado'] == 0) {
+            return "dado_de_baja";
+          }
           return "usuario";
         }else{
           return "no_registrado";

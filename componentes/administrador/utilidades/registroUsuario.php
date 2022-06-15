@@ -16,17 +16,22 @@
   $cp = $_POST['cp'];
   $nombre = $_POST['nombre'];
   $fk_idAdministrador = $_SESSION['id'];
-  try {
-    $sql = "INSERT INTO `usuario`(`membresia`, `miembro_desde`, `vigencia`, `sexo`, `fecha_nacimiento`, `tipo_sangre`, `telefono`, `email`, `contra`, `calle`, `colonia`, `cp`, `nombre`, `fk_idAdministrador`) VALUES ('$membresia','$miembro_desde','$vigencia','$sexo','$fecha_nacimiento','$tipo_sangre','$telefono','$correo','$contra','$calle','$colonia','$cp','$nombre','$fk_idAdministrador')";
-    if ($mysqli->query($sql) === TRUE) {
-      echo "<script>
-		        alert('Registro realizado.');
-		        </script>";
-      header("Location: ".$_SERVER['HTTP_REFERER']."");
-    } else {
-      echo "Error: " . $sql . "<br>" . $mysqli->error;
+  if ($membresia != null AND $miembro_desde != null AND $vigencia != null AND $sexo != null AND $fecha_nacimiento != null AND $tipo_sangre != null AND $telefono != null AND $correo != null AND $contra != null AND $calle != null AND $colonia != null AND $cp != null AND $nombre != null) {
+    try {
+      $sql = "INSERT INTO `usuario`(`membresia`, `miembro_desde`, `vigencia`, `sexo`, `fecha_nacimiento`, `tipo_sangre`, `telefono`, `email`, `contra`, `calle`, `colonia`, `cp`, `nombre`, `fk_idAdministrador`) VALUES ('$membresia','$miembro_desde','$vigencia','$sexo','$fecha_nacimiento','$tipo_sangre','$telefono','$correo','$contra','$calle','$colonia','$cp','$nombre','$fk_idAdministrador')";
+      if ($mysqli->query($sql) === TRUE) {
+        echo "<script>
+        alert('Registro realizado.');
+        window.location= '../consulSocio.php' </script>";
+      } else {
+        echo "Error: " . $sql . "<br>" . $mysqli->error;
+      }
+    } catch (PDOException $e) {
+      echo $e;
     }
-  } catch (PDOException $e) {
-    echo $e;
+  }else{
+    echo "<script>
+        alert('Ingrese todos los datos.');
+        window.location= '../regisSocio.php' </script>";
   }
 ?>
