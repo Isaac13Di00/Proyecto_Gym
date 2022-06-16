@@ -23,55 +23,60 @@ section{
     
 }
 .name {
-    
     font-size: 27px;
     font-weight: bold;
     color: white;
 }
 
 .div-info{
-    
-    width: 99%;
-    height: fit-content;
     margin-top: 15px;
-    padding-left: 15px;
-}
-
-.div-centro{
-    width: 50%;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100%-20px);
     height: fit-content;
-    margin-top: 15px;
-    padding-left: 15px;
 }
 
 .info{
-    float: left;
-    margin-left: 20px;
-    width: 55%;
-    height: auto;
-    border-radius: 6px;
-    background-color: rgba(255, 140, 50, 1);
-}
-.info ul{
+    width: 50%;
+    height: fit-content;
     padding-top: 15px;
-    padding-bottom: 30px;
+    float: left;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    text-align: right;
+    background-color: rgb(255, 139, 44);
 }
+
 .info ul li{
-    color: white;
-    margin-left: 25px;
     list-style: none;
-    margin-top: 5px;
+    margin-bottom: 20px;
 }
 .info-text{
+    padding-left: 10px;
     font-size: 20px;
-    color: white;
-    background-color:rgb(255, 139, 44);
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 7px;
 }
 .bold{
     color: wheat;
     font-weight: bold;
 }
-
+.info input{
+    background-color: rgb(255, 139, 44);
+    border: solid 2px white;
+    width: 40%;
+    color: white;
+    
+}
+.info select{
+    background-color: rgb(255, 139, 44);
+    border: solid 2px white;
+    width: 40.5%;
+    color: white;
+    font-weight: bold;
+}
 .visits{
     text-align: center;
     float: left;
@@ -84,6 +89,17 @@ section{
     border-radius: 7px;
     border-color: #8b8b8b;
 }
+.visits .button{
+    font-size: 25px;
+    padding: 10px;
+    background-color: rgba(221, 221, 221, 1);
+    border-radius: 7px;
+    border-color: #8b8b8b;
+}
 .visits button:hover{
     background-color: rgb(199, 199, 199);
+}
+
+.left{
+    float: left;
 }

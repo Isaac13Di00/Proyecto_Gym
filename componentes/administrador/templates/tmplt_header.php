@@ -9,6 +9,7 @@
                 <button class="mas"><ion-icon name="caret-down" class="mas-icon"></ion-icon></button>
                 <div class="mas-contenido">
                     <a href="/Proyecto_Gym/componentes/utilidades/cerrarSesion.php" style="color: red;">Cerrar Sesión</a>
+                    <a href="/Proyecto_Gym/componentes/administrador/editarPerfil.php" style="color: black;">Editar Perfil</a>
                 </div>
         </div>
 </header>

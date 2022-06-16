@@ -1,8 +1,8 @@
 <?php
-	session_start();
-	error_reporting(0);
+    session_start();
+    error_reporting(0);
     if (!isset($_SESSION['nombre'])) {
-        header("Location: /Proyecto-Gym/");
+        header("Location: /Proyecto_Gym/");
     } 
 ?>
 <!DOCTYPE html>
@@ -18,46 +18,46 @@
     <?php include("./templates/tmplt_header.php");?>
     <section>
         <div class="div-name">
-            <label class="name" id="idNombre"><?php echo date('d/m/y');?></label>
+            <label class="name" id="idNombre"><?php echo date('y/m/d');?></label>
         </div>
-        <div class="div-info">
-            <form class="info" method="POST">
+        <form class="div-info" method="POST" action="./utilidades/modificarDatos.php">
+            <div class="info">
                 <ul>
-                    <li><label class="info-text">Membresía: </label><label class="info-text bold"><?php echo $_SESSION['membresia'];?></label></li>
-                    <li><label class="info-text">Miembro desde: </label><label class="info-text bold"><?php echo $_SESSION['miembro_desde'];?></label></li>
+                    <li><label class="info-text left">Membresía: </label><label class="info-text bold"><?php echo $_SESSION['membresia'];?></label></li>
+                    <li><label class="info-text left">Miembro desde: </label><label class="info-text bold"><?php echo $_SESSION['miembro_desde'];?></label></li>
                     <br>
-                    <li><label class="info-text">Vigencia: </label><label class="info-text bold"><?php echo $_SESSION['vigencia'];?></label></li>
+                    <li><label class="info-text left">Vigencia: </label><label class="info-text bold"><?php echo $_SESSION['vigencia'];?></label></li>
                     <br>
-                    <li><label class="info-text bold">Sexo: </label><select class="info-text">
+                    <li><label class="info-text bold left">Sexo: </label><select name="sexo" class="info-text select">
                         <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option>
                         <option value="Otro">Otro</option>
                     </select></li>
-                    <li><label class="info-text bold">Fecha de nacimiento: </label><input type="date" class="info-text"/></li>
-                    <li><label class="info-text bold">Tipo de sangre: </label><select class="info-text">
+                    <li><label class="info-text bold left">Fecha de nacimiento: </label><input name="fecha_nacimiento" type="date" class="info-text space"/></li>
+                    <li><label class="info-text bold left">Tipo de sangre: </label><select name="tipo_sangre" class="info-text select">
                         <option value="A+">A+</option>
-                        <option value="A-">A+</option>
-                        <option value="B+">A+</option>
-                        <option value="B-">A+</option>
-                        <option value="AB+">A+</option>
-                        <option value="AB-">A+</option>
-                        <option value="O+">A+</option>
-                        <option value="O-">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
                     </select></li>
                     <br>
-                    <li><label class="info-text bold">Teléfono: </label><input type="tel" class="info-text"/></li>
-                    <li><label class="info-text bold">Correo: </label><input type="mail" class="info-text"/></li>
+                    <li><label class="info-text bold left">Nombre: </label><input name="nombre" type="text" class="info-text space"/></li>
                     <br>
-                    <li><label class="info-text bold">Dirección </label></li>
-                    <li><label class="info-text bold">Calle: </label><input type="text" class="info-text"/></li>
-                    <li><label class="info-text bold">Colonia: </label><input type="text" class="info-text"/></li>
-                    <li><label class="info-text bold">Código postal: </label><input type="number" class="info-text"/></li>
+                    <li><label class="info-text bold left">Dirección </label></li><br>
+                    <li><label class="info-text bold left">Calle: </label><input name="calle" type="text" class="info-text space"/></li>
+                    <li><label class="info-text bold left">Colonia: </label><input name="colonia" type="text" class="info-text space"/></li>
+                    <li><label class="info-text bold left">Código postal: </label><input name="cp" type="number" class="info-text space"/></li>
                 </ul>
-            </form>
-            <div class="visits">
-                <a href="./perfil.php"><button>Terminar</button></a>
             </div>
-        </div>
+            <div class="visits">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <input type="submit" value="Terminar" class="button">
+            </div>
+        </form>
     </section>
     <?php include("./templates/tmplt_footer.php");?>
 </body>

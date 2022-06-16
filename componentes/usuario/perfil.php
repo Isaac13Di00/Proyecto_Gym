@@ -1,9 +1,9 @@
 <?php
     session_start();
-    error_reporting(0); 
-    if ($_SESSION['login'] != 'usuario') {
+    error_reporting(0);
+    if (!isset($_SESSION['nombre'])) {
         header("Location: /Proyecto_Gym/");
-    }    
+    } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,25 +25,26 @@
         <div class="div-info">
             <div class="info">
                 <ul>
-                    <li><label class="info-text">Membresía: </label><label class="info-text bold"><?php echo $_SESSION['membresia'];?></label></li>
-                    <li><label class="info-text">Miembro desde: </label><label class="info-text bold"><?php echo $_SESSION['miembro_desde'];?></label></li>
+                    <li><label class="info-text left">Membresía: </label><label class="info-text bold"><?php echo $_SESSION['membresia'];?></label></li>
+                    <li><label class="info-text left">Miembro desde: </label><label class="info-text bold"><?php echo $_SESSION['miembro_desde'];?></label></li>
                     <br>
-                    <li><label class="info-text">Vigencia: </label><label class="info-text bold"><?php echo $_SESSION['vigencia'];?></label></li>
+                    <li><label class="info-text left">Vigencia: </label><label class="info-text bold"><?php echo $_SESSION['vigencia'];?></label></li>
                     <br>
-                    <li><label class="info-text bold">Sexo: </label><label class="info-text"><?php echo $_SESSION['sexo'];?></label></li>
-                    <li><label class="info-text bold">Fecha de nacimiento: </label><label class="info-text"><?php echo $_SESSION['fecha_nacimiento'];?></label></li>
-                    <li><label class="info-text bold">Tipo de sangre: </label><label class="info-text"><?php echo $_SESSION['tipo_sangre'];?></label></li>
+                    <li><label class="info-text bold left">Sexo: </label><label class="info-text"><?php echo $_SESSION['sexo'];?></label></li>
+                    <li><label class="info-text bold left">Fecha de nacimiento: </label><label class="info-text"><?php echo $_SESSION['fecha_nacimiento'];?></label></li>
+                    <li><label class="info-text bold left">Tipo de sangre: </label><label class="info-text"><?php echo $_SESSION['tipo_sangre'];?></label></li>
                     <br>
-                    <li><label class="info-text bold">Teléfono: </label><label class="info-text"><?php echo $_SESSION['telefono'];?></label></li>
-                    <li><label class="info-text bold">Correo: </label><label class="info-text"><?php echo $_SESSION['correo'];?></label></li>
+                    <li><label class="info-text bold left">Teléfono: </label><label class="info-text"><?php echo $_SESSION['telefono'];?></label></li>
+                    <li><label class="info-text bold left">Correo: </label><label class="info-text"><?php echo $_SESSION['correo'];?></label></li>
                     <br>
-                    <li><label class="info-text bold">Dirección </label></li>
-                    <li><label class="info-text bold">Calle: </label><label class="info-text"><?php echo $_SESSION['calle'];?></label></li>
-                    <li><label class="info-text bold">Colonia: </label><label class="info-text"><?php echo $_SESSION['colonia'];?></label></li>
-                    <li><label class="info-text bold">Código postal: </label><label class="info-text"><?php echo $_SESSION['cp'];?></label></li>
+                    <li><label class="info-text bold left">Dirección </label></li><br>
+                    <li><label class="info-text bold left">Calle: </label><label class="info-text"><?php echo $_SESSION['calle'];?></label></li>
+                    <li><label class="info-text bold left">Colonia: </label><label class="info-text"><?php echo $_SESSION['colonia'];?></label></li>
+                    <li><label class="info-text bold left">Código postal: </label><label class="info-text"><?php echo $_SESSION['cp'];?></label></li>
                 </ul>
             </div>
             <div class="visits">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <a href="./editarPerfil.php"><button>Editar perfil</button></a>
             </div>
         </div>
