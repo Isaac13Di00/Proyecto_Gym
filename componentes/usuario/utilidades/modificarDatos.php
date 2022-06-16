@@ -22,6 +22,6 @@
     }else{
         echo "<script>
             alert('Ingrese todos los datos solicitados.');
-            window.location= '../agendar.php';</script>";
+            window.location= '../editarPerfil.php';</script>";
     }
 ?>

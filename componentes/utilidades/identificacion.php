@@ -58,7 +58,7 @@
       #Mensaje de dado de baja
       echo "<script>
           alert('Dado de baja.');
-           </script>";
+          window.location= '/Proyecto_Gym/' </script>";
     }
   }else{
     #Mensaje de campos vacios 
